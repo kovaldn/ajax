@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <form action="ajax.php" method="post" id="order-form">
+        <fieldset>
+            <legend>Введите данные для связи с вами</legend>
+            <ul>
+                <li>
+                    <label for="user-name">Имя</label>
+                    <input id="user-name" name="user-name" type="text" required>
+                </li>
+                <li>
+                    <label for="user-email">Email</label>
+                    <input id="user-email" name="user-email" type="text" required>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>Выберите способ оплаты</legend>
+            <ul>
+                <li>
+                    <input type="radio" id="pay-cash" name="pay-option" value="наличными">
+                    <label for="pay-cash">Наличными</label>
+                </li>
+                <li>
+                    <input type="radio" id="pay-card" name="pay-option" value="картой">
+                    <label for="pay-card">Картой</label>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>Дополнительно</legend>
+            <ul>
+                <li>
+                    <label for="pay-card">Сообщите что-нибудь</label>
+                    <textarea name="message" id="message"></textarea>
+                </li>
+                <li>
+                    <label for="dont-disturb">Не перезванивайте мне</label>
+                    <input type="checkbox" id="dont-disturb" name="dont-disturb" value="НЕТ">
+                </li>
+            </ul>
+        </fieldset>
+        <button type="submit">Заказать</button>
+    </form>
+    <!-- <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    <script src="/js/common.js"></script> -->
+</body>
+</html>
+
+
+<!-- 
+   Шпоргалка по структурированию форм
+    https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form
+ -->
