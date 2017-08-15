@@ -1,15 +1,16 @@
 <?php
 
-if($_SERVER['REQUEST_METHOD'] !== 'POST'){
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     return false;
 } 
 
-    $data = array();
-    $name = ($_POST['user-name']);
-    $email = ($_POST['user-email']);
-    $pay = ($_POST['pay-option']);
-    $message = ($_POST['message']);
-    $disturb = ($_POST['dont-disturb']);
+    $data = [];
+    
+    $name = $_POST['user-name'];
+    $email = $_POST['user-email'];
+    $pay = $_POST['pay-option'];
+    $message = $_POST['message'];
+    $disturb = $_POST['dont-disturb'];
 
     $disturb = isset($disturb) ? $disturb : 'ДА';
    
@@ -36,7 +37,7 @@ $mail_message = '
 
 $mail = mail('koval@loftschool.com', 'Заказ', $mail_message, $headers);
 
-if($mail){
+if ($mail) {
     $data['status'] = "OK";
     $data['mes'] = "Письмо успешно отправлено";
 }else{

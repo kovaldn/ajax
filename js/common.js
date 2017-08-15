@@ -21,7 +21,7 @@ var submitForm = function (ev) {
         var mes = ans.mes,
             status = ans.status;
 
-        if ( status === 'OK'){
+        if ( status === 'OK') {
             alert(mes);           
         } else{
             alert(mes);
